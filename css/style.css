@@ -116,7 +116,7 @@ body {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-template-rows: 350px;
+    grid-template-rows: 320px;
     grid-gap: 9rem;
     max-width: 1850px;
     width: 100%;
@@ -166,8 +166,9 @@ body {
 }
 
 .contact-section {
-    height: 50vh;
+    height: 30vh;
     padding: 3rem;
+    background: linear-gradient(90deg, rgba(10,198,241,1) 2%, rgba(5,89,108,1) 100%);
 }
 
 .contact-section h2 {
