@@ -1,13 +1,23 @@
+:root {
+    --main-blue: linear-gradient(90deg, rgba(10,198,241,1) 2%, rgba(5,89,108,1) 100%);
+    --main-dark-grey: #333;
+    --main-light-grey: #999;
+    --main-red: #b30000;
+}
+
 * {
     box-sizing: border-box;
+    /* set font size. Default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px */
     font-size: 62.5%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 3rem;
+    font-size: 1.8rem;
 }
 
 .navbar {
@@ -52,21 +62,26 @@ body {
     width: 100%;
     height: 100vh;
     padding: 3rem;
-    background-color: rgb(10,198,241);
-    background: linear-gradient(90deg, rgba(10,198,241,1) 2%, rgba(5,89,108,1) 100%);
+    background: var(--main-blue);
 }
 
-.welcome-section .main-heading {
+h2 {
     font-weight: 700;
     font-size: 5rem;
     padding: 1rem 0;
 }
 
-.sub-heading {
+.contrast-h2 {
+    font-size: 5rem;
+    color: var(--main-red);
+}
+
+h3 {
     font-weight: 300;
     font-size: 2rem;
     padding: 1rem 0;
 }
+
 
 .icons {
     padding: 0.2rem 0;
@@ -80,12 +95,7 @@ body {
 }
 
 .icons a:hover {
-    color: #b30000;
-}
-
-.welcome-section .different {
-    font-size: 5rem;
-    color: #b30000;
+    color: var(--hover);
 }
 
 .project-section {
@@ -94,17 +104,6 @@ body {
     display: grid;
     background-color: #999;
     padding: 10rem 3rem;
-}
-
-.project-section h2 {
-    font-weight: 700;
-    font-size: 5rem;
-    padding: 1rem 0;
-}
-
-.project-section .different {
-    font-size: 5rem;
-    color: #b30000;
 }
 
 .project-section h3 {
@@ -121,8 +120,18 @@ body {
     max-width: 1850px;
     width: 100%;
     margin: 4rem auto;
-    padding-bottom: 4rem;
+    margin-bottom: 4rem;
 }
+
+@media (max-width: 30.625em) {
+    .project-section {
+      padding: 6rem 1rem;
+    }
+  
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
 .project-tile {
     border: solid black 1px;
@@ -154,32 +163,14 @@ body {
     color: white;
 }
 
-.project-grid i:hover {
-    color: #b30000;
-}
-
-.main-footer {
-    padding: 0.8rem;
-    width: 100%;
-    background-color: #333;
-    color: #666;
+i:hover {
+    color: var(--main-red);
 }
 
 .contact-section {
     height: 30vh;
     padding: 3rem;
-    background: linear-gradient(90deg, rgba(10,198,241,1) 2%, rgba(5,89,108,1) 100%);
-}
-
-.contact-section h2 {
-    font-weight: 700;
-    font-size: 5rem;
-    padding: 1rem 0;
-}
-
-.stand-out {
-    font-size: 5rem;
-    color: #b30000;
+    background: var(--main-blue);
 }
 
 .contact-links {
@@ -189,9 +180,18 @@ body {
 .contact-links i {
     padding-right: 3rem;
     text-decoration: none;
-    color: #333;
+    color: var(--main-dark-grey);
 }
 
 .contact-links i:hover {
-    color: #b30000;
+    color: var(--main-red);
 }
+
+.main-footer {
+    font-size: 2rem;
+    padding: 0.8rem;
+    width: 100%;
+    color: #777;
+    background-color: var(--main-dark-grey);
+}
+
