@@ -5,6 +5,12 @@
     --main-red: #b30000;
 }
 
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+
 * {
     box-sizing: border-box;
     /* set font size. Default document font size = 16px, 1rem = 16px, 100% = 16px
@@ -25,8 +31,9 @@ body {
     justify-content: flex-end;
     align-items: center;
     top: 0;
+    left: 0;
     width: 100%;  
-    background: #333;
+    background: var(--main-dark-grey);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
@@ -65,13 +72,13 @@ body {
     background: var(--main-blue);
 }
 
-h2 {
+h1, h2 {
     font-weight: 700;
     font-size: 5rem;
     padding: 1rem 0;
 }
 
-.contrast-h2 {
+.contrast-h1, .contrast-h2 {
     font-size: 5rem;
     color: var(--main-red);
 }
@@ -122,16 +129,6 @@ h3 {
     margin: 4rem auto;
     margin-bottom: 4rem;
 }
-
-@media (max-width: 30.625em) {
-    .project-section {
-      padding: 6rem 1rem;
-    }
-  
-    .project-grid {
-      grid-template-columns: 1fr;
-    }
-  }
 
 .project-tile {
     border: solid black 1px;
